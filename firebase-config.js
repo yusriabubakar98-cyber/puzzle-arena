@@ -1,5 +1,4 @@
-// Firebase web app configuration for Puzzle Arena.
-// This config identifies your Firebase project; database access is controlled by Firebase Security Rules.
+// Public Firebase web-app configuration. Never add service-account/Admin credentials here.
 window.FIREBASE_CONFIG = {
   apiKey: "AIzaSyAHy70xwwio2JcoJvvMG0DVhc8XqLQCbC0",
   authDomain: "puzzle-arena-59c5f.firebaseapp.com",
