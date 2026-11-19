@@ -1,20 +1,19 @@
-# Puzzle Arena — Multiplayer Kids Challenge (V0.2)
+# Puzzle Arena — V0.3 Smart Multiplayer Edition
 
-Mobile-first room-based educational quiz for ages 3–12, supporting 2–10 players.
+Mobile-first multiplayer educational quiz game for ages 3–12.
 
-## V0.2 updates
-- English / Bahasa Melayu interface selector.
-- Malay picture-answer vocabulary and Malay word-completion questions.
-- Room host's language selection determines the question language for everyone in that room.
-- Fixed round progression: the host now checks the live Realtime Database snapshot whenever room data changes. When every current player has submitted an answer, the host automatically changes the round to the reveal phase and the **Next Round** button appears. The 20-second timer remains the fallback.
+## V0.3 changes
+- Room QR code in the host lobby. Scanning opens the game with the room PIN prefilled; the player enters a nickname and taps Join.
+- Expanded age-calibrated question bank for pictures, maths, spelling and logic.
+- Question IDs are remembered per room across sessions until the pool needs to recycle.
+- Leave controls moved away from Next Round and protected by a confirmation prompt.
+- Existing English/Bahasa Melayu interface and Firebase Realtime Database support retained.
 
-## Files
-- `index.html` — game frontend and multiplayer logic
-- `firebase-config.js` — Firebase web configuration
-- `database.rules.json` — prototype Realtime Database rules
+## Firebase
+Keep `firebase-config.js` alongside `index.html`. It contains the Firebase web-app configuration for this project. Firebase web config is public client configuration; secure access with Realtime Database Security Rules. Do not add service-account credentials or Admin SDK secrets.
 
-## Publish update
-Upload/replace these files in the root of the existing GitHub repository and commit the changes. GitHub Pages will redeploy automatically. Keep the repository's existing Pages settings (`main` / root).
+## GitHub Pages
+Upload all files in this folder to the repository root, replacing the previous version, then commit. GitHub Pages should publish from `main` and `/(root)`.
 
-## Important security note
-The current database rules are only suitable for controlled prototype testing. Any signed-in anonymous user can read and write room records. Before public use, implement server-enforced host permissions, answer ownership, score validation, rate limits and room expiry (e.g. trusted backend/Cloud Functions). Do not collect children's personal information; use nicknames only.
+## Notes
+The room QR image is generated using the QR Server image endpoint at runtime. A network connection is required to display it. QR scanning uses the URL query parameter `?room=PIN`.
