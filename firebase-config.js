@@ -1,13 +1,12 @@
-// 1) Create a Firebase project and enable Realtime Database + Anonymous Authentication.
-// 2) Copy your Firebase web app configuration below.
-// 3) Keep this file out of public repositories if you add any privileged credentials.
-// Firebase web config is not a server secret; secure access with Database Rules.
+// Firebase web app configuration for Puzzle Arena.
+// This config identifies your Firebase project; database access is controlled by Firebase Security Rules.
 window.FIREBASE_CONFIG = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAHy70xwwio2JcoJvvMG0DVhc8XqLQCbC0",
+  authDomain: "puzzle-arena-59c5f.firebaseapp.com",
+  databaseURL: "https://puzzle-arena-59c5f-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "puzzle-arena-59c5f",
+  storageBucket: "puzzle-arena-59c5f.firebasestorage.app",
+  messagingSenderId: "22372943293",
+  appId: "1:22372943293:web:36bf43aee1fbfea0263ed4",
+  measurementId: "G-X42F01ZQ7H"
 };
